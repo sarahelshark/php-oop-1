@@ -9,14 +9,16 @@ class Movie
     public $overview;
     public $cast;
     public $duration;
+    public $genres; //potrei dichiararle internamente al construct con public di fronte a loro, cancellanto questi  qui
     
-    public function __construct($title,$overview,$cast,$duration)
+    public function __construct($title,$overview,$cast,$duration, array $genres)
     {
      //select an object property inside a class using the $this variable
      $this -> title = $title;
      $this -> overview = $overview;
      $this -> cast = $cast;
      $this -> duration = $duration;
+     $this ->genres = $genres;
      
     }
 

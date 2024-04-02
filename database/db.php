@@ -1,4 +1,6 @@
 <?php
+//importo la classe che ho spostato dentro Models
+require_once __DIR__ . '/../app/Models/Movie.php';
 
 $movies = 
 [
@@ -16,7 +18,13 @@ $movies =
         "Al Lettieri",
         "Gianni Russo",
         "Talia Shire",
-    ] , 120 ) , 
+    ] , 
+    120 , 
+    [
+        new Genre('molto drammatico', 'molto-drammatico'),
+        new Genre('molto mafioso', 'molto-mafioso'),
+    ]) , 
+
     new Movie('Matrix', 'Matrix lor lorem ipsum dolo',  [ 
         "Keanu Reeves",
         "Laurence Fishburne",
@@ -31,14 +39,17 @@ $movies =
         "Anthony Ray Parker",
         "Paul Goddard",
     
-    ] , 60 ) ,
+    ] ,
+     60 ) ,
+
     new Movie('Avatar', 'Avatar lor lorem ipsum dolo',  [
         "Lorem ipsumo",
         "dolor sit",
         "amet et",
         "volummptat est",
         "Pinco Pallino",
-     ] , 180 )
+     ] , 
+     180)
 ];
 
 ?>

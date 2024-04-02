@@ -134,6 +134,13 @@ $avatar = new Movie('Avatar', 'Avatar lor lorem ipsum dolo',  [
                                     <h3><?= $movie->title ?> </h3>
                                     <p><?= $movie->overview ?> </p>
                                 </div>
+                                <div class="card-footer">
+                                    <ul class="d-flex gap-1 list-unstyled">
+                                        <?php foreach ($movie -> genres as $genre) : ?>
+                                            <li><?= $genre-> name ?> </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                      <?php endforeach; ?>
